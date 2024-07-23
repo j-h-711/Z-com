@@ -1,3 +1,5 @@
-export default function SignUp() {
-  return <main>회원가입 모달</main>;
+import SignupModal from "../../../_component/SignupModal";
+
+export default function Page() {
+  return <SignupModal />;
 }
