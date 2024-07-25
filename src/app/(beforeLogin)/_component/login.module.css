@@ -14,7 +14,7 @@
 .modal {
   background-color: #ffffff;
   position: relative;
-  top: 5%;
+  top: 20%;
   max-width: 80vw;
   min-width: 600px;
   border-radius: 16px;
@@ -88,7 +88,9 @@
   opacity: 0.5;
 }
 .actionButton:hover {
-  background-color: rgb(39, 44, 48);
+  background-color: rgb(29, 155, 240);
+  opacity: 1;
+  border: none;
 }
 
 .closeButton {
