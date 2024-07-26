@@ -2,7 +2,6 @@ import Link from "next/link";
 import styles from "./trend.module.css";
 
 export default function Trend({ trend }) {
-  console.log(trend);
   return (
     <>
       <Link href={`/search?q=${trend.title}`} className={styles.container}>
