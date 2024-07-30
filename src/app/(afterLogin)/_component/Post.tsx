@@ -3,6 +3,7 @@ import Link from "next/link";
 import dayjs from "dayjs";
 import "dayjs/locale/ko";
 import relativeTime from "dayjs/plugin/relativeTime";
+import ActionButtons from "./ActionButtons";
 
 dayjs.locale("ko");
 dayjs.extend(relativeTime);
@@ -33,7 +34,11 @@ export default function Post({ target }) {
           </div>
           <div>{target.content}</div>
           <div className={styles.postImageSection}></div>
-          {/* <ActionButtons /> */}
+          <ActionButtons
+            like={target.like}
+            comment={target.comment}
+            repost={target.repost}
+          />
         </div>
       </div>
     </article>
