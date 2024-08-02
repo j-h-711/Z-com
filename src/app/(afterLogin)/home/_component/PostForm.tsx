@@ -1,13 +1,13 @@
 "use client";
 
 import { ChangeEventHandler, FormEventHandler, useRef, useState } from "react";
-import styles from "./postForm.module.css";
+import style from "./postForm.module.css";
 
 export default function PostForm() {
   const imageRef = useRef<HTMLInputElement>(null);
   const [content, setContent] = useState("");
   const me = {
-    id: "jh",
+    id: "zerohch0",
     image: "/me.jpg",
   };
 
@@ -24,21 +24,21 @@ export default function PostForm() {
   };
 
   return (
-    <form className={styles.postForm} onSubmit={onSubmit}>
-      <div className={styles.postUserSection}>
-        <div className={styles.postUserImage}>
+    <form className={style.postForm} onSubmit={onSubmit}>
+      <div className={style.postUserSection}>
+        <div className={style.postUserImage}>
           <img src={me.image} alt={me.id} />
         </div>
       </div>
-      <div className={styles.postInputSection}>
+      <div className={style.postInputSection}>
         <textarea
           value={content}
           onChange={onChange}
           placeholder="무슨 일이 일어나고 있나요?"
         />
-        <div className={styles.postButtonSection}>
-          <div className={styles.footerButtons}>
-            <div className={styles.footerButtonLeft}>
+        <div className={style.postButtonSection}>
+          <div className={style.footerButtons}>
+            <div className={style.footerButtonLeft}>
               <input
                 type="file"
                 name="imageFiles"
@@ -47,7 +47,7 @@ export default function PostForm() {
                 ref={imageRef}
               />
               <button
-                className={styles.uploadButton}
+                className={style.uploadButton}
                 type="button"
                 onClick={onClickButton}
               >
@@ -58,7 +58,7 @@ export default function PostForm() {
                 </svg>
               </button>
             </div>
-            <button className={styles.actionButton} disabled={!content}>
+            <button className={style.actionButton} disabled={!content}>
               게시하기
             </button>
           </div>

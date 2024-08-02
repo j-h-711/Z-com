@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./followRecommend.module.css";
+import style from "./followRecommend.module.css";
 
 export default function FollowRecommend() {
   const onFollow = () => {};
@@ -12,17 +12,17 @@ export default function FollowRecommend() {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.userLogoSection}>
-        <div className={styles.userLogo}>
+    <div className={style.container}>
+      <div className={style.userLogoSection}>
+        <div className={style.userLogo}>
           <img src={user.image} alt={user.id} />
         </div>
       </div>
-      <div className={styles.userInfo}>
-        <div className={styles.title}>{user.nickname}</div>
-        <div className={styles.count}>@{user.id}</div>
+      <div className={style.userInfo}>
+        <div className={style.title}>{user.nickname}</div>
+        <div className={style.count}>@{user.id}</div>
       </div>
-      <div className={styles.followButtonSection}>
+      <div className={style.followButtonSection}>
         <button onClick={onFollow}>팔로우</button>
       </div>
     </div>

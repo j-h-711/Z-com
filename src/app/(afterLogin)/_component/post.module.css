@@ -88,10 +88,94 @@
   flex-direction: row;
 }
 
-.postImageSection img {
+/* 게시글 이미지 섹션 */
+
+.postImageSection {
+  display: inline-block;
   margin-top: 12px;
   width: 100%;
   border-radius: 16px;
+}
+.postImageSection.oneImage {
+  max-height: 510px;
+  background-repeat: no-repeat;
+}
+.postImageSection img {
+  border-radius: 16px;
+  max-height: 510px;
+  width: 100%;
+}
+/* 이미지 2개 */
+.postImageSection.twoImage {
+  height: 272px;
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+}
+.postImageSection.twoImage a {
+  flex: 1;
+}
+.postImageSection.twoImage a:first-child {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+.postImageSection.twoImage a:last-child {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+/* 이미지 3개 */
+.postImageSection.threeImage {
+  height: 272px;
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+}
+/* 쓰리이미지의 바로 자식 a와 div를 좌우로 동일하게 차지하도록 */
+.postImageSection.threeImage > a,
+.postImageSection.threeImage > div {
+  flex: 1;
+}
+/* 쓰리이미지의 바로 자식 div는 사진 두장을 세로로 보여주도록 함 */
+.postImageSection.threeImage > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+/* 쓰리이미지의 자식 div 안의 a태그 사진 두장을 1씩 차지하도록 */
+.postImageSection.threeImage > div > a {
+  flex: 1;
+}
+/* 쓰리이미지의 첫 a태그 이미지는 왼쪽에 크게 */
+.postImageSection.threeImage > a:first-child {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+/* 쓰리이미지 안의 div 내의 두 사진을 위 아래로 배치 radius 스타일링 */
+.postImageSection.threeImage > div > a:first-child {
+  border-top-right-radius: 16px;
+}
+.postImageSection.threeImage > div > a:last-child {
+  border-bottom-right-radius: 16px;
+}
+/* 이미지 4개 */
+.postImageSection.fourImage {
+  height: 272px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+.postImageSection.fourImage > a:nth-child(1) {
+  border-top-left-radius: 16px;
+}
+.postImageSection.fourImage > a:nth-child(2) {
+  border-top-right-radius: 16px;
+}
+.postImageSection.fourImage > a:nth-child(3) {
+  border-bottom-left-radius: 16px;
+}
+.postImageSection.fourImage > a:nth-child(4) {
+  border-bottom-right-radius: 16px;
 }
 
 .actionButtons {
@@ -144,6 +228,21 @@
   background-color: rgba(29, 155, 240, 0.1);
 }
 
+.commentButton.white svg,
+.commentButton.white .count {
+  fill: white;
+  color: white;
+}
+.repostButton.white svg,
+.repostButton.white .count {
+  fill: white;
+  color: white;
+}
+.heartButton.white svg,
+.heartButton.white .count {
+  fill: white;
+  color: white;
+}
 .commentButton.commented svg,
 .commentButton:hover svg {
   fill: rgb(29, 155, 240);
